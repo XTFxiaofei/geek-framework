@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.geekcattle.mapper.app.TopicMapper">
+  <resultMap id="BaseResultMap" type="com.geekcattle.model.app.Topic">
+      <id column="topic_id" jdbcType="INTEGER" property="topicId" />
+      <result column="user_id" jdbcType="INTEGER" property="userId" />
+      <result column="title" jdbcType="VARCHAR" property="title" />
+      <result column="theme" jdbcType="VARCHAR" property="theme" />
+      <result column="content" jdbcType="VARCHAR" property="content" />
+      <result column="create_time" jdbcType="BIGINT" property="createTime" />
+      <result column="view_account_json" jdbcType="VARCHAR" property="viewAccountJson" />
+      <result column="sticky" jdbcType="INTEGER" property="sticky" />
+      <result column="praise_account_json" jdbcType="VARCHAR" property="praiseAccountJson" />
+      <result column="flag" jdbcType="INTEGER" property="flag" />
+      <result column="content_picture_json" jdbcType="VARCHAR" property="contentPictureJson" />
+      <result column="comment_number" jdbcType="INTEGER" property="commentNumber" />
+      <result column="view_number" jdbcType="INTEGER" property="viewNumber" />
+  </resultMap>
+
+  <!--根据用户名获取用户信息-->
+  <select id="selectByUsername" parameterType="String" resultMap="BaseResultMap">
+    select *  from member where account = #{uername};
+  </select>
+
+</mapper>

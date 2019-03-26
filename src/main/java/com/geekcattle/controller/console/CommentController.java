@@ -1,9 +1,7 @@
 package com.geekcattle.controller.console;
 
-import com.geekcattle.model.app.User;
-import com.geekcattle.model.member.Member;
-import com.geekcattle.service.app.UserService;
-import com.geekcattle.service.member.MemberService;
+import com.geekcattle.model.app.Comment;
+import com.geekcattle.service.app.CommentService;
 import com.geekcattle.util.ReturnUtil;
 import com.github.pagehelper.PageInfo;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -23,28 +21,28 @@ import java.util.List;
  * 成员类（MemberController）
  */
 @Controller
-@RequestMapping("/console/user")
-public class UserController {
+@RequestMapping("/console/comment")
+public class CommentController {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
-    private UserService userService;
+    private CommentService commentService;
 
-    @RequiresPermissions("user:index")
+    @RequiresPermissions("comment:index")
     @RequestMapping(value = "/index", method = {RequestMethod.GET})
     public String index(Model model) {
-        return "console/user/index";
+        return "console/comment/index";
     }
 
-    @RequiresPermissions("user:index")
+    @RequiresPermissions("comment:index")
     @RequestMapping(value = "/list", method = {RequestMethod.GET})
     @ResponseBody
-    public ModelMap list(User user) {
+    public ModelMap list(Comment comment) {
         ModelMap map = new ModelMap();
-        List<User> lists = userService.getPageList(user);
-        map.put("pageInfo", new PageInfo<User>(lists));
-        map.put("queryParam", user);
+        List<Comment> lists = commentService.getPageList(comment);
+        map.put("pageInfo", new PageInfo<Comment>(lists));
+        map.put("queryParam", comment);
         return ReturnUtil.success("加载成功", map, null);
     }
 

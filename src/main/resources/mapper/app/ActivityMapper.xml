@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.geekcattle.mapper.app.ActivityMapper">
+  <resultMap id="BaseResultMap" type="com.geekcattle.model.app.Activity">
+      <id column="activity_id" jdbcType="INTEGER" property="activityId" />
+      <result column="user_id" jdbcType="INTEGER" property="userId" />
+      <result column="title" jdbcType="VARCHAR" property="title" />
+      <result column="logo_image" jdbcType="VARCHAR" property="logoImage" />
+      <result column="create_time" jdbcType="BIGINT" property="createTime" />
+      <result column="content" jdbcType="VARCHAR" property="content" />
+      <result column="place" jdbcType="VARCHAR" property="place" />
+      <result column="type" jdbcType="VARCHAR" property="type" />
+      <result column="level" jdbcType="VARCHAR" property="level" />
+      <result column="sponsor" jdbcType="VARCHAR" property="sponsor" />
+      <result column="target" jdbcType="VARCHAR" property="target" />
+      <result column="type_nickname" jdbcType="VARCHAR" property="typeNickname" />
+      <result column="activity_time" jdbcType="VARCHAR" property="activityTime" />
+      <result column="content_picture" jdbcType="VARCHAR" property="contentPicture" />
+      <result column="flag" jdbcType="INTEGER" property="flag" />
+      <result column="update_time" jdbcType="BIGINT" property="updateTime" />
+      <result column="activity_name" jdbcType="VARCHAR" property="activityName" />
+  </resultMap>
+
+
+</mapper>

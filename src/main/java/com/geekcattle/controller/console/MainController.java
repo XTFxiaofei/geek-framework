@@ -98,6 +98,10 @@ public class MainController {
         }
     }
 
+    /**
+     * 首页总览信息
+     * @return
+     */
     private Map<String, Object> getTotal() {
         Example exampleAdmin = new Example(Admin.class);
         Integer adminCount = adminService.getCount(exampleAdmin);
@@ -108,10 +112,10 @@ public class MainController {
         Example exampleMember = new Example(Member.class);
         Integer userCount = memberService.getCount(exampleMember);
         Map<String, Object> mp = new HashMap<>(4);
-        mp.put("user", userCount);
-        mp.put("admin", adminCount);
-        mp.put("role", roleCount);
-        mp.put("menu", menuCount);
+        mp.put("user", userCount);  //会员数量
+        mp.put("admin", adminCount); //管理员数量
+        mp.put("role", roleCount); //角色总数
+        mp.put("menu", menuCount); //资源总数
         return mp;
     }
 

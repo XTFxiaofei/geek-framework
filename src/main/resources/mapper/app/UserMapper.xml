@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.geekcattle.mapper.app.UserMapper">
+  <resultMap id="BaseResultMap" type="com.geekcattle.model.app.User">
+      <id column="user_id" jdbcType="INTEGER" property="userId" />
+      <result column="account" jdbcType="VARCHAR" property="account" />
+      <result column="password" jdbcType="VARCHAR" property="password" />
+      <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+      <result column="email" jdbcType="INTEGER" property="email" />
+      <result column="phone" jdbcType="BIGINT" property="phone" />
+      <result column="icon" jdbcType="VARCHAR" property="icon" />
+      <result column="level" jdbcType="VARCHAR" property="level" />
+      <result column="state" jdbcType="INTEGER" property="state" />
+      <result column="create_time" jdbcType="BIGINT" property="createTime" />
+      <result column="update_time" jdbcType="BIGINT" property="updateTime" />
+      <result column="student_card" jdbcType="VARCHAR" property="studentCard" />
+      <result column="card_password" jdbcType="VARCHAR" property="cardPassword" />
+      <result column="real_name" jdbcType="VARCHAR" property="realName" />
+      <result column="role" jdbcType="VARCHAR" property="role" />
+      <result column="sex" jdbcType="INTEGER" property="sex" />
+  </resultMap>
+
+
+
+</mapper>

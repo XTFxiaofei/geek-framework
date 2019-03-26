@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.geekcattle.mapper.app.CommentMapper">
+  <resultMap id="BaseResultMap" type="com.geekcattle.model.app.Comment">
+      <id column="comment_id" jdbcType="INTEGER" property="commentId" />
+      <result column="from_id" jdbcType="INTEGER" property="fromId" />
+      <result column="from_nickname" jdbcType="VARCHAR" property="fromNickname" />
+      <result column="to_id" jdbcType="INTEGER" property="toId" />
+      <result column="to_nickename" jdbcType="VARCHAR" property="toNickename" />
+      <result column="comment_type" jdbcType="VARCHAR" property="commentType" />
+      <result column="target_id" jdbcType="INTEGER" property="targetId" />
+      <result column="comment_content" jdbcType="VARCHAR" property="commentContent" />
+      <result column="create_time" jdbcType="BIGINT" property="createTime" />
+      <result column="comment_picture" jdbcType="VARCHAR" property="commentPicture" />
+      <result column="flag" jdbcType="INTEGER" property="flag" />
+      <result column="target_content" jdbcType="VARCHAR" property="targetContent" />
+
+  </resultMap>
+
+
+</mapper>
